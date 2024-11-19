@@ -1,0 +1,78 @@
+.tipos-pokemon {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.tarjeta-tipo {
+    position: relative;
+    overflow: hidden;
+    width: 250px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tarjeta-tipo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tarjeta-tipo img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-tipo:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.tarjeta-tipo h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.tarjeta-tipo:hover h3 {
+    color: #FFD700;
+}
+
+.tarjeta-tipo p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.tarjeta-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.contenedor-particulas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.particula {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+}

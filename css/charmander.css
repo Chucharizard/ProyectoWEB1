@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --naranja-charmander: #FFA500;
+    --rojo-charmander: #FF4500;
+    --amarillo-charmander: #FFD700;
+    --fondo-claro: #FFF5E6;
+}
+
+body, html {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--fondo-claro);
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.contenedor-encabezado {
+    background: linear-gradient(45deg, var(--naranja-charmander), var(--rojo-charmander));
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.contenido-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    z-index: 2;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--amarillo-charmander);
+    color: var(--rojo-charmander);
+}
+
+.heroe {
+    text-align: center;
+    padding: 2rem 0; /* Reducción del padding para que la sección sea más compacta */
+    position: relative;
+}
+
+.heroe h1 {
+    font-size: 3rem; 
+    color: white;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.llama img {
+    width: 100px; 
+    height: auto;
+    animation: flame-flicker 0.8s infinite ease-in-out;
+}
+
+@keyframes flame-flicker {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.contenido-principal {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.seccion-contenido {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.seccion-contenido:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.seccion-contenido::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, var(--naranja-charmander), var(--rojo-charmander));
+}
+
+.seccion-contenido h2 {
+    color: var(--rojo-charmander);
+    margin-top: 0;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--naranja-charmander);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.seccion-contenido p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Sección ¿Sabías que? */
+.dato-curioso {
+    background: linear-gradient(135deg, var(--amarillo-charmander), #FFC72C);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(255, 69, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.dato-curioso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 69, 0, 0.3);
+}
+
+
+.dato-curioso img.llama-curioso {
+    width: 60px; /* Tamaño de la imagen de la llama */
+    height: auto;
+}
+
+.dato-curioso h3 {
+    color: var(--rojo-charmander);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dato-curioso p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+
+.seccion-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-top: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.seccion-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.imagen-interactiva {
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-interactiva:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.imagen-interactiva img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.imagen-interactiva .superposicion {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.imagen-interactiva:hover .superposicion {
+    transform: translateY(0);
+}
+
+.imagen-interactiva h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+}
+
+.imagen-interactiva p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.seccion-cita {
+    background: var(--amarillo-charmander);
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.seccion-cita blockquote {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--rojo-charmander);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.seccion-cita cite {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.seccion-cita::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    font-size: 15rem;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: serif;
+    z-index: 0;
+}
+
+.seccion-cita::after {
+    content: '"';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    font-size: 15rem;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: serif;
+    z-index: 0;
+}
+
+footer {
+    background: linear-gradient(45deg, var(--rojo-charmander), var(--naranja-charmander));
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotar 20s linear infinite;
+}
+
+footer p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.1rem;
+}
+
+@keyframes rotar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.boton-subir {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--rojo-charmander);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    z-index: 999;
+}
+
+.boton-subir:hover {
+    background: var(--naranja-charmander);
+}
+
+.boton-subir.activo {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contenido-encabezado {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 20px;
+    }
+
+    .heroe h1 {
+        font-size: 3rem;
+    }
+
+    .llama img {
+        width: 100px;
+    }
+
+    .seccion-contenido h2 {
+        font-size: 1.8rem;
+    }
+
+    .seccion-contenido p,
+    .dato-curioso p {
+        font-size: 1rem;
+    }
+
+    .dato-curioso h3 {
+        font-size: 1.5rem;
+    }
+
+    .seccion-video iframe {
+        height: 200px;
+    }
+}
