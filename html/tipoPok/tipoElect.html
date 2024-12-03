@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéCards - Pokémon Eléctricos</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <link rel="stylesheet" href="../../css/general/navFoot.css">
+    <link rel="stylesheet" href="../../css/tipoPok/tipoElect.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+                    alt="PokéCards Logo" class="nav-logo" width="40" height="40">
+                <span class="brand-text" >PokéCards</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html#catalogo">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ofertas">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#novedades">Novedades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html/general/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <i class="bi bi-cart3 position-relative">
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
+                        </i>
+                    </a>
+                    <a href="#" class="nav-link ms-3">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <header>
+        <div class="parallax-bg"></div>
+        <div class="electric-particles"> 
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <h1>Iniciales Eléctricos</h1>
+        <div class="subtitle">Descubre el poder electrizante de este Pokémon inicial y desata relámpagos en tus batallas</div>
+    
+    </header>
+
+    <div class="container">
+        <div class="pokemon-grid">
+            <div class="pokemon-card-wrapper">
+                <a href="../pokemon/pikachu.html" class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu">
+                    <h3>Pikachu</h3>
+                    <div class="pokemon-type">Eléctrico</div>
+                    <p>Cuando se enfada, este Pokémon libera la energía que almacena en las bolsas de sus mejillas. Sus descargas eléctricas pueden llegar a ser muy potentes.</p>
+                    <div class="pokemon-info">
+                        <span>Altura: 0.4 m</span>
+                        <span>Peso: 6.0 kg</span>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Raichu -->
+            <div class="pokemon-card-wrapper">
+                <a href="../pokemon/raichu.html" class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png" alt="Raichu">
+                    <h3>Raichu</h3>
+                    <div class="pokemon-type">Eléctrico</div>
+                    <p>Su larga cola actúa como conexión a tierra para protegerse de su propia potencia eléctrica. Puede liberar descargas de hasta 100.000 voltios.</p>
+                    <div class="pokemon-info">
+                        <span>Altura: 0.8 m</span>
+                        <span>Peso: 30.0 kg</span>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Electabuzz -->
+            <div class="pokemon-card-wrapper">
+                <a href="../pokemon/electabuzz.html" class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/125.png" alt="Electabuzz">
+                    <h3>Electabuzz</h3>
+                    <div class="pokemon-type">Eléctrico</div>
+                    <p>Se alimenta de la electricidad de las centrales eléctricas. A menudo causa grandes apagones en las ciudades.</p>
+                    <div class="pokemon-info">
+                        <span>Altura: 1.1 m</span>
+                        <span>Peso: 30.0 kg</span>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Jolteon -->
+            <div class="pokemon-card-wrapper">
+                <a href="../pokemon/jolteon.html" class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/135.png" alt="Jolteon">
+                    <h3>Jolteon</h3>
+                    <div class="pokemon-type">Eléctrico</div>
+                    <p>Si se enfada o se asusta, se le eriza el pelaje en forma de agujas que usa para disparar potentes rayos.</p>
+                    <div class="pokemon-info">
+                        <span>Altura: 0.8 m</span>
+                        <span>Peso: 24.5 kg</span>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Ampharos -->
+            <div class="pokemon-card-wrapper">
+                <a href="../pokemon/ampharos.html" class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/181.png" alt="Ampharos">
+                    <h3>Ampharos</h3>
+                    <div class="pokemon-type">Eléctrico</div>
+                    <p>La luz de su cola puede verse desde el espacio. En la antigüedad, la gente usaba su luz como señal para enviar mensajes.</p>
+                    <div class="pokemon-info">
+                        <span>Altura: 1.4 m</span>
+                        <span>Peso: 61.5 kg</span>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Manectric -->
+            <div class="pokemon-card-wrapper">
+                <a href="../pokemon/manectric.html" class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/310.png" alt="Manectric">
+                    <h3>Manectric</h3>
+                    <div class="pokemon-type">Eléctrico</div>
+                    <p>Descarga la electricidad que acumula en su melena. Su melena se eriza cuando está cargado de electricidad.</p>
+                    <div class="pokemon-info">
+                        <span>Altura: 1.5 m</span>
+                        <span>Peso: 40.2 kg</span>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Luxray -->
+            <div class="pokemon-card-wrapper">
+                <a href="../pokemon/luxray.html" class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/405.png" alt="Luxray">
+                    <h3>Luxray</h3>
+                    <div class="pokemon-type">Eléctrico</div>
+                    <p>Tiene la capacidad de ver a través de los muros. Puede localizar y atrapar a su presa oculta.</p>
+                    <div class="pokemon-info">
+                        <span>Altura: 1.4 m</span>
+                        <span>Peso: 42.0 kg</span>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Zeraora -->
+            <div class="pokemon-card-wrapper">
+                <a href="../pokemon/zeraora.html" class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/807.png" alt="Zeraora">
+                    <h3>Zeraora</h3>
+                    <div class="pokemon-type">Eléctrico</div>
+                    <p>Se electrifica para aumentar su velocidad. Corre tan rápido como un relámpago, atacando con sus garras eléctricas.</p>
+                    <div class="pokemon-info">
+                        <span>Altura: 1.5 m</span>
+                        <span>Peso: 44.5 kg</span>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Miraidon -->
+            <div class="pokemon-card-wrapper">
+                <a href="../pokemon/miraidon.html" class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1008.png" alt="Miraidon">
+                    <h3>Miraidon</h3>
+                    <div class="pokemon-type">Eléctrico</div>
+                    <p>Un Pokémon legendario que representa el futuro. Puede transformar su cuerpo para adaptarse a diferentes situaciones de combate.</p>
+                    <div class="pokemon-info">
+                        <span>Altura: 3.5 m</span>
+                        <span>Peso: 240.0 kg</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre Nosotros</h3>
+                    <p>PokéCards es tu destino número uno para coleccionar las mejores cartas Pokémon.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#catalogo">Catálogo</a></li>
+                        <li><a href="#ofertas">Ofertas</a></li>
+                        <li><a href="#novedades">Novedades</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-envelope me-2"></i>willyguevara048@gmail.com</li>
+                        <li><i class="bi bi-telephone me-2"></i>74402990</li>
+                        <li><i class="bi bi-geo-alt me-2"></i>Yotala - Sucre</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 1994 Chucharizard. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+       <!-- Modal del Carrito -->
+       <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-white">
+                        <i class="bi bi-cart3 me-2"></i>Carrito de Compras
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItems" class="text-white">
+                        Tu carrito está vacío
+                    </div>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <h5 class="text-white">Total: $<span id="cartTotal">0.00</span></h5>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-success w-100" id="checkoutBtn" disabled>
+                                    <i class="bi bi-credit-card me-2"></i>Pagar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../../js/general/menu.js"></script>
+
+
+</body>
+</html>
