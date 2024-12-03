@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéCards - Iniciales de Fuego</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <link rel="stylesheet" href="../../css/general/navFoot.css">
+    <link rel="stylesheet" href="../../css/tipoPok/tipofuego.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+                    alt="PokéCards Logo" class="nav-logo" width="40" height="40">
+                <span class="brand-text" >PokéCards</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#catalogo">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ofertas">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#novedades">Novedades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html/general/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <i class="bi bi-cart3 position-relative">
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
+                        </i>
+                    </a>
+                    <a href="#" class="nav-link ms-3">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <header>
+        <div class="parallax-bg"></div>
+        <div class="fire-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <h1>Iniciales de Fuego</h1>
+        <div class="subtitle">Descubre el poder ardiente de estos Pokémon iniciales y desata su potencial en tus batallas</div>
+    </header>
+
+    <div class="container">
+        <div class="pokemon-grid">
+            <div class="pokemon-card-wrapper">
+                <a href="../pokemon/charmander.html" class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" alt="Charmander">
+                    <h3>Charmander</h3>
+                    <div class="pokemon-type">Fuego</div>
+                    <p>Un lagarto con una llama en la cola. La llama es una indicación de su salud y estado de ánimo. Cuando está débil, la llama también se debilita.</p>
+                    <div class="pokemon-info">
+                        <span>Altura: 0.6 m</span>
+                        <span>Peso: 8.5 kg</span>
+                    </div>
+                </a>
+            </div>
+            <div class="pokemon-card-wrapper">
+                <a href="../pokemon/Cyndaquill.html" class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/155.png" alt="Cyndaquil">
+                    <h3>Cyndaquil</h3>
+                    <div class="pokemon-type">Fuego</div>
+                    <p>Su lomo se enciende cuando se emociona. Las llamas son una defensa contra los depredadores. Cyndaquil puede intensificar sus llamas a voluntad.</p>
+                    <div class="pokemon-info">
+                        <span>Altura: 0.5 m</span>
+                        <span>Peso: 7.9 kg</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="pokemon-card-wrapper">
+            <a href="../pokemon/Torchic.html" class="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/255.png" alt="Torchic">
+                <h3>Torchic</h3>
+                <div class="pokemon-type">Fuego</div>
+                <p>Un pollito que escupe bolas de fuego. Tiene una llama ardiendo en su interior desde el nacimiento. Es conocido por su valentía en combate.</p>
+                <div class="pokemon-info">
+                    <span>Altura: 0.4 m</span>
+                    <span>Peso: 2.5 kg</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Corregir Chimchar -->
+        <div class="pokemon-card-wrapper">
+            <a href="../pokemon/Chimchar.html" class="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/390.png" alt="Chimchar">
+                <h3>Chimchar</h3>
+                <div class="pokemon-type">Fuego</div>
+                <p>Un mono con una llama en la cola. Es ágil y travieso, capaz de escalar paredes escarpadas con facilidad. Su fuego se intensifica con su emoción.</p>
+                <div class="pokemon-info">
+                    <span>Altura: 0.5 m</span>
+                    <span>Peso: 6.2 kg</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Corregir Tepig -->
+        <div class="pokemon-card-wrapper">
+            <a href="../pokemon/Tepig.html" class="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/495.png" alt="Tepig">
+                <h3>Tepig</h3>
+                <div class="pokemon-type">Fuego</div>
+                <p>Un cerdito que exhala fuego por la nariz. Cuando come, su nariz se calienta y puede lanzar brasas. Es conocido por su determinación en combate.</p>
+                <div class="pokemon-info">
+                    <span>Altura: 0.5 m</span>
+                    <span>Peso: 9.9 kg</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Corregir Fennekin -->
+        <div class="pokemon-card-wrapper">
+            <a href="../pokemon/Fennekin.html" class="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/653.png" alt="Fennekin">
+                <h3>Fennekin</h3>
+                <div class="pokemon-type">Fuego</div>
+                <p>Un zorro que puede crear ilusiones con calor. Intimida a sus oponentes expulsando aire caliente por sus orejas. Tiene habilidades psíquicas latentes.</p>
+                <div class="pokemon-info">
+                    <span>Altura: 0.4 m</span>
+                    <span>Peso: 9.4 kg</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Corregir Litten -->
+        <div class="pokemon-card-wrapper">
+            <a href="../pokemon/Litten.html" class="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/725.png" alt="Litten">
+                <h3>Litten</h3>
+                <div class="pokemon-type">Fuego</div>
+                <p>Un gato con pelaje inflamable. Utiliza las bolas de pelo que expulsa como proyectiles incendiarios. Es conocido por su actitud independiente y orgullosa.</p>
+                <div class="pokemon-info">
+                    <span>Altura: 0.4 m</span>
+                    <span>Peso: 4.3 kg</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Corregir Scorbunny -->
+        <div class="pokemon-card-wrapper">
+            <a href="../pokemon/Scorbunny.html" class="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/810.png" alt="Scorbunny">
+                <h3>Scorbunny</h3>
+                <div class="pokemon-type">Fuego</div>
+                <p>Un conejo que deja huellas ardientes. Corre para aumentar su temperatura corporal y liberar energía. Es conocido por su velocidad y energía ilimitada.</p>
+                <div class="pokemon-info">
+                    <span>Altura: 0.3 m</span>
+                    <span>Peso: 4.5 kg</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Corregir Fuecoco -->
+        <div class="pokemon-card-wrapper">
+            <a href="../pokemon/Fuecoco.html" class="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/906.png" alt="Fuecoco">
+                <h3>Fuecoco</h3>
+                <div class="pokemon-type">Fuego</div>
+                <p>Un cocodrilo con escamas que generan calor. Flota en el agua absorbiendo aire en su saco resonante. Es tranquilo y le gusta relajarse bajo el sol.</p>
+                <div class="pokemon-info">
+                    <span>Altura: 0.4 m</span>
+                    <span>Peso: 9.8 kg</span>
+                </div>
+            </a>
+        </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre Nosotros</h3>
+                    <p>PokéCards es tu destino número uno para coleccionar las mejores cartas Pokémon.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#catalogo">Catálogo</a></li>
+                        <li><a href="#ofertas">Ofertas</a></li>
+                        <li><a href="#novedades">Novedades</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-envelope me-2"></i>willyguevara048@gmail.com</li>
+                        <li><i class="bi bi-telephone me-2"></i>74402990</li>
+                        <li><i class="bi bi-geo-alt me-2"></i>Yotala - Sucre</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 1994 Chucharizard. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+       <!-- Modal del Carrito -->
+       <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-white">
+                        <i class="bi bi-cart3 me-2"></i>Carrito de Compras
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItems" class="text-white">
+                        Tu carrito está vacío
+                    </div>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <h5 class="text-white">Total: $<span id="cartTotal">0.00</span></h5>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-success w-100" id="checkoutBtn" disabled>
+                                    <i class="bi bi-credit-card me-2"></i>Pagar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../../js/general/menu.js"></script>
+
+
+</body>
+</html>

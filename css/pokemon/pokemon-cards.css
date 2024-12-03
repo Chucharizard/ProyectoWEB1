@@ -1,0 +1,362 @@
+:root {
+    --color-fondo: #1a1a1a;
+    --color-carta: #2a2a2a;
+    --color-primario: #ff4500;
+    --color-secundario: #ff8c00;
+    --color-acento: #ffd700;
+    --color-texto: #ffffff;
+    --sombra-suave: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --sombra-media: 0 8px 15px rgba(0, 0, 0, 0.2);
+    --transicion: all 0.3s ease;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+/* Banner Styles */
+.banner-principal {
+    background: linear-gradient(45deg, var(--color-primario), var(--color-secundario));
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-imagen {
+    max-width: 300px;
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.3));
+    animation: flotar 6s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Buscador Styles */
+.buscador {
+    margin-bottom: 2rem;
+}
+
+.buscador .input-group {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.btn-buscar {
+    background: linear-gradient(45deg, var(--color-primario), var(--color-secundario));
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    transition: var(--transicion);
+}
+
+.btn-buscar:hover {
+    transform: scale(1.05);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4);
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    padding: 10px 15px;
+}
+
+.form-control:focus {
+    background-color: white;
+    box-shadow: 0 0 0 0.25rem rgba(255, 69, 0, 0.25);
+}
+
+/* Resto del CSS existente... */
+
+/* Contador del carrito */
+.contador-carrito {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--color-acento);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--color-texto);
+}
+
+/* Filtros Styles */
+.seccion-filtros {
+    background: rgba(255,255,255,0.05);
+    padding: 1rem;
+    margin: 2rem 0;
+    border-radius: 10px;
+}
+
+.form-select {
+    background-color: var(--color-carta);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--color-texto);
+    cursor: pointer;
+    appearance: auto;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.form-select:hover {
+    border-color: var(--color-primario);
+}
+
+.form-select option {
+    background-color: var(--color-carta);
+    color: var(--color-texto);
+    padding: 8px;
+}
+
+.form-select:focus {
+    background-color: var(--color-carta);
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 0.25rem rgba(255, 69, 0, 0.25);
+    color: var(--color-texto);
+}
+
+.form-select option:checked,
+.form-select option:hover {
+    background: var(--color-primario);
+    color: white;
+}
+
+/* Card Styles */
+.carta {
+    background: var(--color-carta);
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    transition: var(--transicion);
+    height: 100%;
+    overflow: hidden;
+}
+
+.carta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--color-primario) 0%, transparent 70%);
+    opacity: 0;
+    transform: rotate(30deg);
+    transition: var(--transicion);
+}
+
+.carta:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra-media);
+}
+
+.carta:hover::before {
+    opacity: 0.1;
+    transform: rotate(0deg);
+}
+
+.carta.oculta {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+.etiqueta {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.etiqueta.ultra-rara {
+    background: linear-gradient(45deg, #ffd700, #ffa500);
+    color: #000;
+    animation: brillar 2s infinite;
+}
+
+.etiqueta.rara {
+    background: linear-gradient(45deg, #4a90e2, #357abd);
+    color: white;
+}
+
+.etiqueta.comun {
+    background: linear-gradient(45deg, #b7b7b7, #8a8a8a);
+    color: white;
+}
+
+@keyframes brillar {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.3); }
+}
+
+.carta-imagen {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto 20px;
+    display: block;
+    transition: var(--transicion);
+}
+
+.carta:hover .carta-imagen {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.stats {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.precio {
+    color: var(--color-acento);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn.btn-anadir {
+    background: linear-gradient(45deg, var(--color-primario), var(--color-secundario));
+    border: none;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 25px;
+    transition: var(--transicion);
+    cursor: pointer !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn.btn-anadir:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4);
+    color: white !important;
+}
+
+.btn.btn-anadir:active {
+    transform: scale(0.95);
+}
+
+.btn.btn-anadir.clicking {
+    animation: clickEffect 0.3s ease;
+}
+
+@keyframes clickEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+/* Modal Styles */
+.modal-content {
+    background: var(--color-carta);
+    color: var(--color-texto);
+}
+
+.modal-header, .modal-footer {
+    border-color: rgba(255,255,255,0.1);
+}
+
+.carrito-item {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.carrito-imagen {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Toast Styles */
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+/* No resultados */
+.no-resultados {
+    text-align: center;
+    padding: 2rem;
+    color: var(--color-texto);
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+/* Paginación */
+.pagination {
+    margin-top: 2rem;
+}
+
+.page-link {
+    background-color: var(--color-carta);
+    border-color: rgba(255,255,255,0.1);
+    color: var(--color-texto);
+}
+
+.page-link:hover {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+    color: var(--color-texto);
+}
+
+.page-item.active .page-link {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .banner-imagen {
+        max-width: 200px;
+    }
+
+    .carta {
+        margin: 0 10px 20px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn.btn-anadir {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-principal {
+        padding: 2rem 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}

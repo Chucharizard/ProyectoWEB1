@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéCards - Tu Tienda de Tarjetas Pokémon</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/general/style.css">
+
+    <link rel="stylesheet" href="css/general/navbar.css">
+
+    <link rel="stylesheet" href="css/general/footer.css">
+</head>
+
+<body>
+    <!-- Fondo de estrellas -->
+    <div class="starfield" id="starfield"></div>
+    <div class="main-wrapper"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+                    alt="PokéCards Logo" class="nav-logo" width="40" height="40">
+                <span class="brand-text" >PokéCards</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#catalogo">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ofertas">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#novedades">Novedades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html/general/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <i class="bi bi-cart3 position-relative">
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
+                        </i>
+                    </a>
+                    <a href="#" class="nav-link ms-3">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="floating-particles" id="particles"></div>
+
+        <div class="hero-content">
+            <h1 id="brand-h1" class="brand-text" class="hero-title"   >PokéCards</h1>
+            <p class="hero-subtitle">Descubre el mundo de las cartas Pokémon</p>
+        </div>
+
+        <div class="scroll-arrow" onclick="scrollToContent()">
+            <svg viewBox="0 0 24 24">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="tipos-pokemon" id="catalogo">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Nuestras Cartas</h2>
+            <div class="row g-4">
+               
+                 <!-- Planta -->
+                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-pokemon" data-type="grass">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" alt="Venusaur">
+                        <h3 class="card-title">Planta</h3>
+                        <p>Naturaleza y crecimiento</p>
+                        <a href="html/tipoPok/tipoPlanta.html" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+
+                <!-- Fuego -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-pokemon" data-type="fire">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" alt="Charizard">
+                        <h3 class="card-title">Fuego</h3>
+                        <p>Poder ardiente y devastador</p>
+                        <a href="html/tipoPok/tipoFuego.html" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+    
+                <!-- Agua -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-pokemon" data-type="water">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png" alt="Blastoise">
+                        <h3 class="card-title">Agua</h3>
+                        <p>Fluidez y adaptabilidad</p>
+                        <a href="html/tipoPok/tipoAgua.html" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+    
+                <!-- Eléctrico -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card-pokemon" data-type="electric">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+                        <h3 class="card-title">Eléctrico</h3>
+                        <p>Velocidad y poder eléctrico</p>
+                        <a href="html/tipoPok/tipoElect.html" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+    
+
+                   <!-- Veneno -->
+                   <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-pokemon" data-type="poison">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/169.png" alt="Crobat">
+                        <h3 class="card-title">Veneno</h3>
+                        <p>Tácticas y estrategia</p>
+                        <a href="html/tipoPok/tipoVeneno.html" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+
+              
+    
+                <!-- Hielo -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-pokemon" data-type="ice">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png" alt="Articuno">
+                        <h3 class="card-title">Hielo</h3>
+                        <p>Frío congelante y belleza</p>
+                        <a href="html/tipoPok/tipoHielo.html" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+    
+                <!-- Lucha -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card-pokemon" data-type="fighting">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png" alt="Machamp">
+                        <h3 class="card-title">Lucha</h3>
+                        <p>Fuerza y determinación</p>
+                        <a href="#" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+    
+                  <!-- Normal -->
+                  <div class="col-md-4" data-aos="fade-up">
+                    <div class="card-pokemon" data-type="normal">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png" alt="Snorlax">
+                        <h3 class="card-title">Normal</h3>
+                        <p>Cartas versátiles y adaptables</p>
+                        <a href="#" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+               
+    
+                <!-- Tierra -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-pokemon" data-type="ground">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/232.png" alt="Donphan">
+                        <h3 class="card-title">Tierra</h3>
+                        <p>Estabilidad y poder</p>
+                        <a href="#" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+    
+                <!-- Volador -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card-pokemon" data-type="flying">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png" alt="Pidgeotto">
+                        <h3 class="card-title">Volador</h3>
+                        <p>Libertad y gracia</p>
+                        <a href="#" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+    
+                <!-- Psíquico -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-pokemon" data-type="psychic">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png" alt="Mewtwo">
+                        <h3 class="card-title">Psíquico</h3>
+                        <p>Poder mental supremo</p>
+                        <a href="#" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+    
+                <!-- Bicho -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-pokemon" data-type="bug">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png" alt="Butterfree">
+                        <h3 class="card-title">Bicho</h3>
+                        <p>Evolución y transformación</p>
+                        <a href="#" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+    
+                <!-- Roca -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card-pokemon" data-type="rock">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png" alt="Aerodactyl">
+                        <h3 class="card-title">Roca</h3>
+                        <p>Dureza y resistencia</p>
+                        <a href="#" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+    
+                <!-- Fantasma -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-pokemon" data-type="ghost">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" alt="Gengar">
+                        <h3 class="card-title">Fantasma</h3>
+                        <p>Misterio y engaño</p>
+                        <a href="#" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+    
+                <!-- Dragón -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-pokemon" data-type="dragon">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png" alt="Dragonite">
+                        <h3 class="card-title">Dragón</h3>
+                        <p>Poder místico ancestral</p>
+                        <a href="#" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+    
+                <!-- Siniestro -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card-pokemon" data-type="dark">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png" alt="Tyranitar">
+                        <h3 class="card-title">Siniestro</h3>
+                        <p>Astucia y engaño</p>
+                        <a href="#" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+    
+                <!-- Acero -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-pokemon" data-type="steel">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/379.png" alt="Registeel">
+                        <h3 class="card-title">Acero</h3>
+                        <p>Defensa y resistencia</p>
+                        <a href="#" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+    
+                <!-- Hada -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-pokemon" data-type="fairy">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/282.png" alt="Gardevoir">
+                        <h3 class="card-title">Hada</h3>
+                        <p>Magia y encanto místico</p>
+                        <a href="#" class="btn btn-outline-light mt-3">Ver Colección</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre Nosotros</h3>
+                    <p>PokéCards es tu destino número uno para coleccionar las mejores cartas Pokémon. Únete a nuestra
+                        comunidad de entrenadores.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#catalogo">Catálogo</a></li>
+                        <li><a href="#ofertas">Ofertas</a></li>
+                        <li><a href="#novedades">Novedades</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-envelope me-2"></i> willyguevara048@gmail.com</li>
+                        <li><i class="bi bi-telephone me-2"></i> 74402990</li>
+                        <li><i class="bi bi-geo-alt me-2"></i> Yotala - Sucre</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 1994 Chucharizard. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal del Carrito -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-white">
+                        <i class="bi bi-cart3 me-2"></i>Carrito de Compras
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItems" class="text-white">
+                        Tu carrito está vacío
+                    </div>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <h5 class="text-white">Total: $<span id="cartTotal">0.00</span></h5>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-success w-100" id="checkoutBtn" disabled>
+                                    <i class="bi bi-credit-card me-2"></i>Pagar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="js/general/index.js"></script>
+
+
+</body>
+
+</html>
