@@ -220,9 +220,6 @@ nav, .navbar {
 
 
 
-#brand-h1{
-    font-size: 6rem;
-}
 
 
 
@@ -319,10 +316,14 @@ nav, .navbar {
 }
 
 /* Cards Section */
+/* Cards Section */
 .tipos-pokemon {
     padding: 4rem 0;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-pokemon {
@@ -332,19 +333,30 @@ nav, .navbar {
     transition: transform 0.3s ease;
     position: relative;
     overflow: hidden;
-    border: 2px solid rgba(255,255,255,0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     height: 100%;
-    width: 80%;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    -webkit-transition: transform 0.3s ease;
-    -moz-transition: transform 0.3s ease;
-    -ms-transition: transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
+    width: 300px;
+    max-width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+@media (min-width: 768px) {
+    .tipos-pokemon {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card-pokemon {
+        margin: 1rem;
+    }
+}
+
+
+
 .card-pokemon.visible {
     opacity: 1;
     transform: translateY(0);
@@ -442,6 +454,64 @@ nav, .navbar {
     background: linear-gradient(90deg, #FFD700, #FFA500);
     transition: width 0.3s ease;
     border-radius: 2px;
+}
+
+#brand-h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 6rem;
+    background: linear-gradient(120deg, #FFD700, #FFA500, #FF6B6B);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.5s ease;
+    animation: gradientMove 3s ease infinite;
+}
+
+#brand-h1::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 1200px) {
+    #brand-h1 {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #brand-h1 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #brand-h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #brand-h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #brand-h1 {
+        font-size: 2.5rem;
+    }
 }
 
 
