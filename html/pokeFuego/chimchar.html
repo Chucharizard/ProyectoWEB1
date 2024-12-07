@@ -21,13 +21,13 @@
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
                     alt="PokéCards Logo" class="nav-logo" width="40" height="40">
-                <span class="brand-text">PokéCards</span>
+                <span class="brand-text" >PokéCards</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -53,20 +53,19 @@
                 <div class="d-flex align-items-center">
                     <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalCarrito">
                         <i class="bi bi-cart3 position-relative">
-                            <span id="contadorCarrito"
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                0
-                            </span>
+                            <span id="contadorCarrito" 
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                          0
+                      </span>
                         </i>
                     </a>
-                    <a href="../login/login.html" class="nav-link ms-3">
+                    <a href="#" class="nav-link ms-3">
                         <i class="bi bi-person-circle"></i>
                     </a>
                 </div>
             </div>
         </div>
     </nav>
-
     <div class="navbar-spacer" style="height: 76px;"></div>
 
     <!-- Banner Principal -->
@@ -86,13 +85,11 @@
                             </button>
                         </div>
                     </div>
-
-
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
-                        alt="Charmander" class="banner-imagen">
-
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/390.png"
+                         alt="Chimchar" 
+                         class="banner-imagen">
                 </div>
             </div>
         </div>
@@ -142,56 +139,32 @@
     <section class="seccion-cartas">
         <div class="container">
             <div class="row" id="contenedor-cartas">
-                <!-- Charmander Base -->
-<div class="col-md-4 mb-4">
-    <div class="carta" data-id="char_base_1" data-precio="19.99" data-rareza="Común" 
-                         data-nombre="Charmander Base"
-                         data-imagen="https://th.bing.com/th/id/OIP._4yI81n9c-UTQtnY6O9MSwHaKL?rs=1&pid=ImgDetMain">
-    <span class="etiqueta comun">Común</span>
-    <img src="https://th.bing.com/th/id/OIP._4yI81n9c-UTQtnY6O9MSwHaKL?rs=1&pid=ImgDetMain"
-                             class="carta-imagen" alt="Charmander Base">
-    <h4 class="mt-3">Charmander Base</h4>
-    <div class="stats">
-    <span>
-    <i class="bi bi-heart-fill text-danger"></i>
-    HP: 50
-    </span>
-    <span class="ms-3">
-    <i class="bi bi-lightning-fill text-warning"></i>
-    ATK: 30
-    </span>
-    </div>
-    <p>Prefiere las cosas calientes. Dicen que cuando llueve le sale vapor de la punta de la cola.</p>
-    <div class="d-flex justify-content-between align-items-center">
-    <span class="precio">$19.99</span>
-    <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
-    <i class="bi bi-cart-plus me-2"></i>Añadir
-    </button>
-    </div>
-    </div>
-    </div>
-    <!-- Charmeleon -->  
+            <!-- Chimchar Base -->
     <div class="col-md-4 mb-4">
-        <div class="carta" data-id="charm_1" data-precio="59.99" data-rareza="Rara"
-            data-nombre="Charmeleon"
-            data-imagen="https://th.bing.com/th/id/R.6d69219a36c10a63e9cdf6d477ab66b8?rik=VQBQvsN9otTvow&riu=http%3a%2f%2f37.media.tumblr.com%2f24d534da606bcf43493feaf9d14c714b%2ftumblr_n3xsx1uImQ1rfnwv0o2_500.gif&ehk=MrRA%2bhloTbxs%2fmKzADISPiymacKED8njcl6LyPbgBms%3d&risl=&pid=ImgRaw&r=0">
-            <span class="etiqueta rara">Rara</span>
-            <img src="https://th.bing.com/th/id/R.6d69219a36c10a63e9cdf6d477ab66b8?rik=VQBQvsN9otTvow&riu=http%3a%2f%2f37.media.tumblr.com%2f24d534da606bcf43493feaf9d14c714b%2ftumblr_n3xsx1uImQ1rfnwv0o2_500.gif&ehk=MrRA%2bhloTbxs%2fmKzADISPiymacKED8njcl6LyPbgBms%3d&risl=&pid=ImgRaw&r=0"
-                class="carta-imagen" alt="Charmeleon">
-            <h4 class="mt-3">Charmeleon</h4>
-            <div class="stats"> 
+        <div class="carta" 
+             data-id="chim_base_1"
+             data-precio="19.99" 
+             data-rareza="Común"
+             data-nombre="Chimchar Base"
+             data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/DP1/DP1_EN_76.png">
+            <span class="etiqueta comun">Común</span>
+            <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/DP1/DP1_EN_76.png" 
+                 class="carta-imagen" 
+                 alt="Chimchar Base">
+            <h4 class="mt-3">Chimchar Base</h4>
+            <div class="stats">
                 <span>
-                    <i class="bi bi-heart-fill text-danger"></i>
-                    HP: 80
+                    <i class="bi bi-heart-fill text-danger"></i> 
+                    HP: 40
                 </span>
                 <span class="ms-3">
-                    <i class="bi bi-lightning-fill text-warning"></i>
-                    ATK: 60 
+                    <i class="bi bi-lightning-fill text-warning"></i> 
+                    ATK: 30
                 </span>
             </div>
-            <p>Cuando balancea la ardiente cola, eleva la temperatura a niveles muy altos.</p>
+            <p>Ágil y travieso, su cola arde con una llama que nunca se apaga.</p>
             <div class="d-flex justify-content-between align-items-center">
-                <span class="precio">$59.99</span>
+                <span class="precio">$19.99</span>
                 <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
                     <i class="bi bi-cart-plus me-2"></i>Añadir
                 </button>
@@ -199,121 +172,170 @@
         </div>
     </div>
 
-    <!-- Charizard -->
-    <div class="col-md-4 mb-4"> 
-        <div class="carta" data-id="char_1" data-precio="129.99" data-rareza="Ultra Rara"
-            data-nombre="Charizard"  
-            data-imagen="https://th.bing.com/th/id/R.2304d08e85dbcb25a105695d59ae57d8?rik=Gm5UopMgpVx1Xw&riu=http%3a%2f%2f24.media.tumblr.com%2f5d84d1742385c2c513c1eb685be832c3%2ftumblr_n3xsx1uImQ1rfnwv0o3_500.gif&ehk=ju90oli9YtDIa%2fkgRDio7AP9E0svH8iF7w9hht8IV9E%3d&risl=&pid=ImgRaw&r=0">
+    <!-- Chimchar Holo -->
+    <div class="col-md-4 mb-4">
+        <div class="carta" 
+             data-id="chim_holo"
+             data-precio="34.99" 
+             data-rareza="Rara"
+             data-nombre="Chimchar Holo"
+             data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/DP2/DP2_EN_77.png">
+            <span class="etiqueta rara">Rara</span>
+            <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/DP2/DP2_EN_77.png" 
+                 class="carta-imagen" 
+                 alt="Chimchar Holo">
+            <h4 class="mt-3">Chimchar Holo</h4>
+            <div class="stats">
+                <span>
+                    <i class="bi bi-heart-fill text-danger"></i> 
+                    HP: 50
+                </span>
+                <span class="ms-3">
+                    <i class="bi bi-lightning-fill text-warning"></i> 
+                    ATK: 35
+                </span>
+            </div>
+            <p>Versión holográfica brillante con efectos especiales.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="precio">$34.99</span>
+                <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
+                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Monferno Base -->
+    <div class="col-md-4 mb-4">
+        <div class="carta" 
+             data-id="mon_base_1"
+             data-precio="49.99" 
+             data-rareza="Rara"
+             data-nombre="Monferno Base"
+             data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/DP3/DP3_EN_56.png">
+            <span class="etiqueta rara">Rara</span>
+            <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/DP3/DP3_EN_56.png" 
+                 class="carta-imagen" 
+                 alt="Monferno Base">
+            <h4 class="mt-3">Monferno Base</h4>
+            <div class="stats">
+                <span>
+                    <i class="bi bi-heart-fill text-danger"></i> 
+                    HP: 70
+                </span>
+                <span class="ms-3">
+                    <i class="bi bi-lightning-fill text-warning"></i> 
+                    ATK: 60
+                </span>
+            </div>
+            <p>Controla hábilmente el fuego de su cola en batalla.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="precio">$49.99</span>
+                <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
+                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Monferno Alt Art -->
+    <div class="col-md-4 mb-4">
+        <div class="carta" 
+             data-id="mon_alt"
+             data-precio="79.99" 
+             data-rareza="Ultra Rara"
+             data-nombre="Monferno Alt Art"
+             data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/DP4/DP4_EN_57.png">
             <span class="etiqueta ultra-rara">Ultra Rara</span>
-            <img src="https://th.bing.com/th/id/R.2304d08e85dbcb25a105695d59ae57d8?rik=Gm5UopMgpVx1Xw&riu=http%3a%2f%2f24.media.tumblr.com%2f5d84d1742385c2c513c1eb685be832c3%2ftumblr_n3xsx1uImQ1rfnwv0o3_500.gif&ehk=ju90oli9YtDIa%2fkgRDio7AP9E0svH8iF7w9hht8IV9E%3d&risl=&pid=ImgRaw&r=0"
-                class="carta-imagen" alt="Charizard">
-            <h4 class="mt-3">Charizard</h4>
+            <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/DP4/DP4_EN_57.png" 
+                 class="carta-imagen" 
+                 alt="Monferno Alt Art">
+            <h4 class="mt-3">Monferno Alt Art</h4>
+            <div class="stats">
+                <span>
+                    <i class="bi bi-heart-fill text-danger"></i> 
+                    HP: 80
+                </span>
+                <span class="ms-3">
+                    <i class="bi bi-lightning-fill text-warning"></i> 
+                    ATK: 70
+                </span>
+            </div>
+            <p>Arte alternativo mostrando sus habilidades acrobáticas.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="precio">$79.99</span>
+                <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
+                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Infernape V -->
+    <div class="col-md-4 mb-4">
+        <div class="carta" 
+             data-id="inf_v"
+             data-precio="139.99" 
+             data-rareza="Ultra Rara"
+             data-nombre="Infernape V"
+             data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH7/SWSH7_EN_155.png">
+            <span class="etiqueta ultra-rara">Ultra Rara</span>
+            <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH7/SWSH7_EN_155.png" 
+                 class="carta-imagen" 
+                 alt="Infernape V">
+            <h4 class="mt-3">Infernape V</h4>
             <div class="stats">
                 <span>
                     <i class="bi bi-heart-fill text-danger"></i> 
                     HP: 120
                 </span>
                 <span class="ms-3">
-                    <i class="bi bi-lightning-fill text-warning"></i>
-                    ATK: 100
+                    <i class="bi bi-lightning-fill text-warning"></i> 
+                    ATK: 90
                 </span>
             </div>
-            <p>Escupe un fuego tan caliente que funde las rocas. Causa incendios forestales sin querer.</p>
+            <p>Forma V con poder y velocidad superiores.</p>
             <div class="d-flex justify-content-between align-items-center">
-                <span class="precio">$129.99</span>
+                <span class="precio">$139.99</span>
                 <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
-                    <i class="bi bi-cart-plus me-2"></i>Añadir 
+                    <i class="bi bi-cart-plus me-2"></i>Añadir
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Charizard VMAX -->
+    <!-- Infernape VMAX -->
     <div class="col-md-4 mb-4">
-        <div class="carta" data-id="char_vmax" data-precio="199.99" data-rareza="Ultra Rara" 
-            data-nombre="Charizard VMAX"
-            data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH3/SWSH3_EN_20.png">
-            <span class="etiqueta ultra-rara">Ultra Rara</span>  
-            <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH3/SWSH3_EN_20.png"
-                class="carta-imagen" alt="Charizard VMAX">
-            <h4 class="mt-3">Charizard VMAX</h4>
+        <div class="carta" 
+             data-id="inf_vmax"
+             data-precio="189.99" 
+             data-rareza="Ultra Rara"
+             data-nombre="Infernape VMAX"
+             data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH8/SWSH8_EN_157.png">
+            <span class="etiqueta ultra-rara">Ultra Rara</span>
+            <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH8/SWSH8_EN_157.png" 
+                 class="carta-imagen" 
+                 alt="Infernape VMAX">
+            <h4 class="mt-3">Infernape VMAX</h4>
             <div class="stats">
                 <span>
-                    <i class="bi bi-heart-fill text-danger"></i>
-                    HP: 330
+                    <i class="bi bi-heart-fill text-danger"></i> 
+                    HP: 150
                 </span>
-                <span class="ms-3"> 
-                    <i class="bi bi-lightning-fill text-warning"></i>
-                    ATK: 190
+                <span class="ms-3">
+                    <i class="bi bi-lightning-fill text-warning"></i> 
+                    ATK: 100
                 </span>
             </div>
-            <p>Su fuego alcanza temperaturas increíblemente altas. ¡Sus llamas derriten todo lo que tocan!</p>
+            <p>La forma VMAX definitiva con llamas ardientes imparables.</p>
             <div class="d-flex justify-content-between align-items-center">
-                <span class="precio">$199.99</span>
+                <span class="precio">$189.99</span>
                 <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
                     <i class="bi bi-cart-plus me-2"></i>Añadir
-                </button>  
+                </button>
             </div>
         </div>
     </div>
-    <!-- Charmander Delta Species -->
-<div class="col-md-4 mb-4">
-    <div class="carta" data-id="char_delta" data-precio="39.99" data-rareza="Rara"
-                         data-nombre="Charmander Delta Species"
-                         data-imagen="https://th.bing.com/th/id/OIP.aZJ57cJfuWNYateIYaNHrgHaKV?w=830&h=1158&rs=1&pid=ImgDetMain">
-    <span class="etiqueta rara">Rara</span>
-    <img src="https://th.bing.com/th/id/OIP.aZJ57cJfuWNYateIYaNHrgHaKV?w=830&h=1158&rs=1&pid=ImgDetMain" 
-                             class="carta-imagen" alt="Charmander Delta Species">
-    <h4 class="mt-3">Charmander Delta Species</h4>
-    <div class="stats">
-    <span>
-    <i class="bi bi-heart-fill text-danger"></i>
-    HP: 60
-    </span>
-    <span class="ms-3">
-    <i class="bi bi-lightning-fill text-warning"></i>
-    ATK: 40
-    </span>
-    </div>
-    <p>Una versión especial de Charmander con un tipo diferente.</p>
-    <div class="d-flex justify-content-between align-items-center">
-    <span class="precio">$39.99</span>
-    <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
-    <i class="bi bi-cart-plus me-2"></i>Añadir
-    </button>
-    </div>
-    </div>
-    </div>
-
-<div class="col-md-4 mb-4">
-    <div class="carta" data-id="char_shiny" data-precio="79.99" data-rareza="Rara"
-        data-nombre="Charmander Shiny" 
-        data-imagen="https://th.bing.com/th/id/OIP.vLyItfV27gj8I0aiQbq58QHaKI?w=877&h=1200&rs=1&pid=ImgDetMain">
-        <span class="etiqueta rara">Rara</span>
-        <img src="https://th.bing.com/th/id/OIP.vLyItfV27gj8I0aiQbq58QHaKI?w=877&h=1200&rs=1&pid=ImgDetMain"
-            class="carta-imagen" alt="Charmander Shiny">
-        <h4 class="mt-3">Charmander Shiny</h4>
-        <div class="stats">
-            <span>
-                <i class="bi bi-heart-fill text-danger"></i>
-                HP: 70
-            </span>
-            <span class="ms-3">
-                <i class="bi bi-lightning-fill text-warning"></i> 
-                ATK: 20
-            </span>
-        </div>
-        <p>Una rara variación brillante de Charmander.</p>
-        <div class="d-flex justify-content-between align-items-center">
-            <span class="precio">$79.99</span>
-            <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
-                <i class="bi bi-cart-plus me-2"></i>Añadir
-            </button>
-        </div>
-    </div>
-</div>
-    
-
             </div>
         </div>
 

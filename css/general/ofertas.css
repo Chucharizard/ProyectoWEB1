@@ -1,3 +1,4 @@
+/* Variables */
 :root {
     --primary-color: #ff6b6b;
     --secondary-color: #4ecdc4;
@@ -5,17 +6,23 @@
     --background-color: #1a1a2e;
     --card-bg: rgba(255, 255, 255, 0.1);
     --discount-color: #ff4757;
+    --text-color: #ffffff;
+    --hover-transition: all 0.3s ease;
+    --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-strong: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Base Styles */
 body {
     background-color: var(--background-color);
-    color: white;
+    color: var(--text-color);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     min-height: 100vh;
     overflow-x: hidden;
 }
 
+/* Particle Effects */
 .particles-container {
     position: fixed;
     top: 0;
@@ -34,15 +41,21 @@ body {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-100px) rotate(180deg); }
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg); 
+    }
+    50% { 
+        transform: translateY(-100px) rotate(180deg); 
+    }
 }
 
+/* Banner Section */
 .banner-ofertas {
     position: relative;
-    padding: 100px 0;
+    padding: 120px 0 80px;
     text-align: center;
     background: linear-gradient(135deg, var(--background-color), #2a2a4e);
+    overflow: hidden;
 }
 
 .glow-text {
@@ -53,6 +66,13 @@ body {
     background-clip: text;
     color: transparent;
     animation: glow 2s ease-in-out infinite alternate;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
 }
 
 @keyframes glow {
@@ -60,6 +80,7 @@ body {
     to { text-shadow: 0 0 20px rgba(255,255,255,0.4); }
 }
 
+/* Search and Filters */
 .search-filter-container {
     max-width: 1200px;
     margin: 40px auto;
@@ -68,19 +89,23 @@ body {
 
 .search-box input {
     width: 100%;
-    padding: 15px;
+    padding: 15px 20px;
     border: none;
     border-radius: 25px;
     background: rgba(255,255,255,0.1);
-    color: white;
+    color: var(--text-color);
     font-size: 1.1rem;
-    transition: all 0.3s ease;
+    transition: var(--hover-transition);
 }
 
 .search-box input:focus {
     outline: none;
     background: rgba(255,255,255,0.2);
     box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .filters {
@@ -91,41 +116,82 @@ body {
 }
 
 .filters select {
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
     border-radius: 15px;
     background: rgba(255,255,255,0.1);
-    color: white;
+    color: var(--text-color);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: var(--hover-transition);
+    min-width: 150px;
 }
 
-.offers-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 40px;
-    max-width: 1400px;
-    margin: 0 auto;
+.filters select:hover {
+    background: rgba(255,255,255,0.2);
 }
 
+.filters select:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+/* Card Grid */
+.cards-section {
+    padding: 40px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.row {
+    margin: -15px;
+}
+
+.col-md-4 {
+    padding: 15px;
+}
+
+/* Card Styles */
 .carta {
     background: var(--card-bg);
     border-radius: 20px;
-    padding: 20px;
+    padding: 25px;
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: var(--hover-transition);
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .carta:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: var(--shadow-strong);
     border-color: var(--accent-color);
 }
 
+.carta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.carta:hover::before {
+    left: 100%;
+}
+
+/* Card Elements */
 .discount-badge {
     position: absolute;
     top: 20px;
@@ -144,79 +210,84 @@ body {
     100% { transform: scale(1); }
 }
 
-.card-image {
+.carta-imagen {
     width: 100%;
     height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    object-fit: contain;
+    margin-bottom: 20px;
+    transition: var(--hover-transition);
 }
 
-.card-image img {
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.carta:hover .card-image img {
+.carta:hover .carta-imagen {
     transform: scale(1.1) rotate(5deg);
+}
+
+.carta h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: var(--text-color);
+}
+
+.carta p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 
 .price-container {
     display: flex;
-    gap: 15px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin: 15px 0;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .original-price {
     text-decoration: line-through;
     color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
 }
 
-.discounted-price {
+.current-price {
     font-size: 1.4rem;
     font-weight: bold;
     color: var(--accent-color);
 }
 
-.btn-anadir {
-    width: 100%;
-    padding: 12px;
+.btn-add {
+    padding: 10px 20px;
     border: none;
     border-radius: 10px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: var(--hover-transition);
 }
 
-.btn-anadir:hover {
+.btn-add:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: var(--shadow-soft);
+    opacity: 0.9;
 }
 
-.rarity-badge {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    margin: 10px 0;
-}
-
-.rarity-badge.ultra-rare {
-    background: linear-gradient(45deg, #ffd700, #ffa500);
-    color: #000;
-}
-
-.rarity-badge.rare {
-    background: linear-gradient(45deg, #4a90e2, #357abd);
-    color: white;
+/* Responsive */
+@media (max-width: 992px) {
+    .filters {
+        flex-wrap: wrap;
+    }
+    
+    .filters select {
+        flex: 1 1 calc(50% - 10px);
+        min-width: 0;
+    }
 }
 
 @media (max-width: 768px) {
+    .col-md-3 {
+        width: 50%; 
+    }
     .glow-text {
         font-size: 2.5rem;
     }
@@ -225,54 +296,77 @@ body {
         flex-direction: column;
     }
     
-    .offers-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        padding: 20px;
+    .filters select {
+        width: 100%;
+    }
+    
+    .carta {
+        padding: 15px;
+    }
+    
+    .banner-ofertas {
+        padding: 80px 0 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-md-3 {
+        width: 100%;
+    }
+    .search-box input {
+        font-size: 1rem;
+        padding: 12px 15px;
+    }
+    
+    .carta-imagen {
+        height: 150px;
+    }
+    
+    .current-price {
+        font-size: 1.2rem;
     }
 }
 
 
+.filters select {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 40px;
+ }
+ 
+ .filters select:hover {
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+ }
+ 
+ .filters select:focus {
+    outline: none;
+    background-color: rgba(255,255,255,0.15);
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+ }
+ 
+ .filters select option {
+    background-color: #2a2a4e;
+    color: #fff;
+    padding: 12px;
+ }
+ 
+ .filters select option:hover {
+    background-color: rgba(255,255,255,0.1);
+ }
 
-
-
-
-.modal-content {
-    background: #1a1a2e !important;
-    color: white;
-}
-
-.modal-dialog {
-    max-width: 500px;
-    margin: 1.75rem auto;
-}
-
-.carrito-item {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 10px;
-}
-
-.carrito-imagen {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    border-radius: 5px;
-}
-
-.btn-outline-danger, .btn-outline-success {
-    color: white;
-    border-color: currentColor;
-}
-
-.btn-outline-danger:hover {
-    background-color: #dc3545;
-}
-
-.btn-outline-success:hover {
-    background-color: #198754;
-}
-
-.text-muted {
-    color: rgba(255, 255, 255, 0.6) !important;
+ .carta {
+    min-width: 220px;
 }

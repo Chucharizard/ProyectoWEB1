@@ -1,0 +1,41 @@
+
+.modal-content {
+    background: #1a1a2e !important;
+    color: white;
+}
+
+.modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+}
+
+.carrito-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.carrito-imagen {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.btn-outline-danger, .btn-outline-success {
+    color: white;
+    border-color: currentColor;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+}
+
+.btn-outline-success:hover {
+    background-color: #198754;
+}
+
+.text-muted {
+    color: rgba(255, 255, 255, 0.6) !important;
+}

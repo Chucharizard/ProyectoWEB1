@@ -16,9 +16,11 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/general/style.css">
+    <link rel="stylesheet" href="css/general/style.css"> 
 
-<link rel="stylesheet" href="css/general/navFoot.css">
+    <link rel="stylesheet" href="css/general/carrito.css">
+
+
 </head>
 
 <body>
@@ -27,7 +29,7 @@
     <div class="main-wrapper"></div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top" >
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
@@ -40,31 +42,31 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#inicio">Inicio</a>
+                        <a class="nav-link active" href="#vanPan">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#catalogo">Catálogo</a>
+                        <a class="nav-link active" href="#catalogo">Catálogo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="html/general/ofertas.html">Ofertas</a>
+                        <a class="nav-link active" href="html/general/ofertas.html">Ofertas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#novedades">Novedades</a>
+                        <a class="nav-link active" href="#novedades">Novedades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="html/general/contacto.html">Contacto</a>
+                        <a class="nav-link active" href="html/general/contacto.html">Contacto</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center">
-                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#cartModal">
+                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalCarrito">
                         <i class="bi bi-cart3 position-relative">
-                            <span
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                0
-                            </span>
+                            <span id="contadorCarrito" 
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                          0
+                      </span>
                         </i>
                     </a>
-                    <a href="#" class="nav-link ms-3">
+                    <a href="html/login/login.html" class="nav-link ms-3">
                         <i class="bi bi-person-circle"></i>
                     </a>
                 </div>
@@ -73,7 +75,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" id="vanPan">
         <div class="floating-particles" id="particles"></div>
 
         <div class="hero-content">
@@ -133,8 +135,7 @@
                         <a href="html/tipoPok/tipoElect.html" class="btn btn-outline-light mt-3">Ver Colección</a>
                     </div>
                 </div>
-    
-
+                
                    <!-- Veneno -->
                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card-pokemon" data-type="poison">
@@ -324,7 +325,7 @@
     </footer>
 
     <!-- Modal del Carrito -->
-    <div class="modal fade" id="cartModal" tabindex="-1">
+    <div class="modal fade" id="modalCarrito" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content bg-dark">
                 <div class="modal-header border-secondary">
@@ -334,7 +335,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div id="cartItems" class="text-white">
+                    <div id="contenidoCarrito" class="text-white">
                         Tu carrito está vacío
                     </div>
                 </div>
@@ -342,10 +343,10 @@
                     <div class="container-fluid">
                         <div class="row align-items-center">
                             <div class="col-6">
-                                <h5 class="text-white">Total: $<span id="cartTotal">0.00</span></h5>
+                                <h5 class="text-white">Total: $<span id="totalCarrito">0.00</span></h5>
                             </div>
                             <div class="col-6">
-                                <button class="btn btn-success w-100" id="checkoutBtn" disabled>
+                                <button class="btn btn-success w-100" id="btnPagar" disabled>
                                     <i class="bi bi-credit-card me-2"></i>Pagar
                                 </button>
                             </div>
@@ -356,13 +357,13 @@
         </div>
     </div>
 
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="js/general/index.js"></script>
-
-
+    <script src="js/general/carrito.js"></script>
 </body>
 
 </html>

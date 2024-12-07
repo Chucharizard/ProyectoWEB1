@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PokéCards - Bulbasaur</title>
+    <title>PokéCards - Charmander</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -11,16 +11,16 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../../css/pokemon/pokemon-cards-planta.css">
+    <link rel="stylesheet" href="../../css/pokemon/pokemon-cards-fuego.css">
 
     <link rel="stylesheet" href="../../css/general/navFoot.css">
-    <link rel="stylesheet" href="../../css/general/carrito.css">
 
+    <link rel="stylesheet" href="../../css/general/carrito.css">
 </head>
 <body>
-  
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+   
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#">
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
@@ -39,13 +39,13 @@
                     <a class="nav-link" href="../../index.html#catalogo">Catálogo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#ofertas">Ofertas</a>
+                    <a class="nav-link" href="../../html/general/ofertas.html">Ofertas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#novedades">Novedades</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="html/general/contacto.html">Contacto</a>
+                    <a class="nav-link" href="../general/contacto.html">Contacto</a>
                 </li>
             </ul>
             <div class="d-flex align-items-center">
@@ -57,14 +57,13 @@
                   </span>
                     </i>
                 </a>
-                <a href="../login/login.html" class="nav-link ms-3">
+                <a href="#" class="nav-link ms-3">
                     <i class="bi bi-person-circle"></i>
                 </a>
             </div>
         </div>
     </div>
 </nav>
-
 
     <div class="navbar-spacer" style="height: 76px;"></div>
 
@@ -73,8 +72,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">Cartas de Bulbasaur</h1>
-                    <p class="lead mb-4">Descubre nuestra exclusiva colección de cartas del Pokémon planta inicial</p>
+                    <h1 class="display-4 fw-bold mb-4">Cartas de Charmander</h1>
+                    <p class="lead mb-4">Descubre nuestra exclusiva colección de cartas del Pokémon más ardiente</p>
                     <div class="buscador">
                         <div class="input-group">
                             <input type="text" 
@@ -90,9 +89,9 @@
                     </div>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" 
-                     alt="Bulbasaur" 
-                     class="banner-imagen">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/498.png"
+                         alt="Tepig" 
+                         class="banner-imagen">
                 </div>
             </div>
         </div>
@@ -142,167 +141,203 @@
 <section class="seccion-cartas">
     <div class="container">
         <div class="row" id="contenedor-cartas">
-             <!-- Bulbasaur Base -->
-           <div class="col-md-4 mb-4">
-            <div class="carta" 
-                   data-id="bulbasaur_base_1"
-                 data-precio="19.99" 
-                 data-rareza="Común"
-                 data-nombre="Bulbasaur Base"
-                 data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/POP5/POP5_EN_12.png">
-                <span class="etiqueta comun">Común</span>
-                <img src="https://th.bing.com/th/id/OIP.AZHwVgQbi6ijCZmhxbVZ3AHaKU?rs=1&pid=ImgDetMain" 
-                     class="carta-imagen" 
-                     alt="Bulbasaur Base">
-                <h4 class="mt-3">Bulbasaur Base</h4>
-                <div class="stats">
-                    <span>HP: 40</span>
-                    <span class="ms-3">ATK: 30</span>
-                </div>
-                <p>La semilla en su espalda crece constantemente mientras absorbe nutrientes.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <span class="precio">$19.99</span>
-                    <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
-                        <i class="bi bi-cart-plus me-2"></i>Añadir
-                    </button>
-                </div>
+               <!-- Tepig Base -->
+    <div class="col-md-4 mb-4">
+        <div class="carta" 
+             data-id="tep_base_1"
+             data-precio="19.99" 
+             data-rareza="Común"
+             data-nombre="Tepig Base"
+             data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/BW1/BW1_EN_15.png">
+            <span class="etiqueta comun">Común</span>
+            <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/BW1/BW1_EN_15.png" 
+                 class="carta-imagen" 
+                 alt="Tepig Base">
+            <h4 class="mt-3">Tepig Base</h4>
+            <div class="stats">
+                <span>
+                    <i class="bi bi-heart-fill text-danger"></i> 
+                    HP: 40
+                </span>
+                <span class="ms-3">
+                    <i class="bi bi-lightning-fill text-warning"></i> 
+                    ATK: 30
+                </span>
+            </div>
+            <p>Exhala fuego por su hocico y usa su cola para calentar bayas.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="precio">$19.99</span>
+                <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
+                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                </button>
             </div>
         </div>
+    </div>
 
-        <!-- Bulbasaur Shiny -->
-        <div class="col-md-4 mb-4">
-            <div class="carta" 
-            data-id="bulbasaur_shiny" 
-                 data-precio="29.99" 
-                 data-rareza="Rara"
-                 data-nombre="Bulbasaur Shiny"
-                 data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/CEL/CEL_EN_1.png">
-                <span class="etiqueta rara">Rara</span>
-                <img src="https://i.pinimg.com/originals/78/3f/b2/783fb2429f628618bca8a018122cb03c.jpg" 
-                     class="carta-imagen" 
-                     alt="Bulbasaur Shiny">
-                <h4 class="mt-3">Bulbasaur Shiny</h4>
-                <div class="stats">
-                    <span>HP: 45</span>
-                    <span class="ms-3">ATK: 35</span>
-                </div>
-                <p>Variante brillante con colores únicos y resplandecientes.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <span class="precio">$29.99</span>
-                    <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
-                        <i class="bi bi-cart-plus me-2"></i>Añadir
-                    </button>
-                </div>
+    <!-- Tepig Holo -->
+    <div class="col-md-4 mb-4">
+        <div class="carta" 
+             data-id="tep_holo"
+             data-precio="34.99" 
+             data-rareza="Rara"
+             data-nombre="Tepig Holo"
+             data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/BW2/BW2_EN_16.png">
+            <span class="etiqueta rara">Rara</span>
+            <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/BW2/BW2_EN_16.png" 
+                 class="carta-imagen" 
+                 alt="Tepig Holo">
+            <h4 class="mt-3">Tepig Holo</h4>
+            <div class="stats">
+                <span>
+                    <i class="bi bi-heart-fill text-danger"></i> 
+                    HP: 50
+                </span>
+                <span class="ms-3">
+                    <i class="bi bi-lightning-fill text-warning"></i> 
+                    ATK: 35
+                </span>
+            </div>
+            <p>Versión holográfica especial con efectos brillantes.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="precio">$34.99</span>
+                <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
+                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                </button>
             </div>
         </div>
+    </div>
 
-        <!-- Ivysaur Base -->
-        <div class="col-md-4 mb-4">
-            <div class="carta" 
-                data-id="ivysaur_base_1"
-                 data-precio="39.99" 
-                 data-rareza="Rara"
-                 data-nombre="Ivysaur Base"
-                 data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/POP6/POP6_EN_8.png">
-                <span class="etiqueta rara">Rara</span>
-                <img src="https://assets.pokemon.com/assets/cms2-es-es/img/cards/web/PGO/PGO_ES_2.png" 
-                     class="carta-imagen" 
-                     alt="Ivysaur Base">
-                <h4 class="mt-3">Ivysaur Base</h4>
-                <div class="stats">
-                    <span>HP: 60</span>
-                    <span class="ms-3">ATK: 45</span>
-                </div>
-                <p>El brote en su lomo crece extrayendo nutrientes del cuerpo del Pokémon.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <span class="precio">$39.99</span>
-                    <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
-                        <i class="bi bi-cart-plus me-2"></i>Añadir
-                    </button>
-                </div>
+    <!-- Pignite Base -->
+    <div class="col-md-4 mb-4">
+        <div class="carta" 
+             data-id="pig_base_1"
+             data-precio="49.99" 
+             data-rareza="Rara"
+             data-nombre="Pignite Base"
+             data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/BW3/BW3_EN_17.png">
+            <span class="etiqueta rara">Rara</span>
+            <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/BW3/BW3_EN_17.png" 
+                 class="carta-imagen" 
+                 alt="Pignite Base">
+            <h4 class="mt-3">Pignite Base</h4>
+            <div class="stats">
+                <span>
+                    <i class="bi bi-heart-fill text-danger"></i> 
+                    HP: 70
+                </span>
+                <span class="ms-3">
+                    <i class="bi bi-lightning-fill text-warning"></i> 
+                    ATK: 60
+                </span>
+            </div>
+            <p>Cuando su fuego interior se intensifica, su velocidad y agilidad aumentan.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="precio">$49.99</span>
+                <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
+                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                </button>
             </div>
         </div>
+    </div>
 
-        <!-- Ivysaur Holo -->
-        <div class="col-md-4 mb-4">
-            <div class="carta" 
-                 data-id="ivysaur_holo"
-                 data-precio="49.99" 
-                 data-rareza="Rara"
-                 data-nombre="Ivysaur Holo"
-                 data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH4/SWSH4_EN_2.png">
-                <span class="etiqueta rara">Rara</span>
-                <img src="https://th.bing.com/th/id/R.0799dd45a9772fd85e37ee7aa0cbc9f8?rik=BC634AgGyslNAQ&pid=ImgRaw&r=0" 
-                     class="carta-imagen" 
-                     alt="Ivysaur Holo">
-                <h4 class="mt-3">Ivysaur Holo</h4>
-                <div class="stats">
-                    <span>HP: 70</span>
-                    <span class="ms-3">ATK: 50</span>
-                </div>
-                <p>Versión holográfica con efectos brillantes especiales.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <span class="precio">$49.99</span>
-                    <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
-                        <i class="bi bi-cart-plus me-2"></i>Añadir
-                    </button>
-                </div>
+    <!-- Pignite Alt Art -->
+    <div class="col-md-4 mb-4">
+        <div class="carta" 
+             data-id="pig_alt"
+             data-precio="79.99" 
+             data-rareza="Ultra Rara"
+             data-nombre="Pignite Alt Art"
+             data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/BW4/BW4_EN_18.png">
+            <span class="etiqueta ultra-rara">Ultra Rara</span>
+            <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/BW4/BW4_EN_18.png" 
+                 class="carta-imagen" 
+                 alt="Pignite Alt Art">
+            <h4 class="mt-3">Pignite Alt Art</h4>
+            <div class="stats">
+                <span>
+                    <i class="bi bi-heart-fill text-danger"></i> 
+                    HP: 80
+                </span>
+                <span class="ms-3">
+                    <i class="bi bi-lightning-fill text-warning"></i> 
+                    ATK: 70
+                </span>
+            </div>
+            <p>Arte alternativo mostrando su poder de fuego en acción.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="precio">$79.99</span>
+                <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
+                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                </button>
             </div>
         </div>
+    </div>
 
-        <!-- Venusaur Base -->
-        <div class="col-md-4 mb-4">
-            <div class="carta" 
-                data-id="venusaur_base_1"
-                 data-precio="89.99" 
-                 data-rareza="Ultra Rara"
-                 data-nombre="Venusaur Base"
-                 data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/BS/BS_EN_15.png">
-                <span class="etiqueta ultra-rara">Ultra Rara</span>
-                <img src="https://th.bing.com/th/id/OIP.-hwWduzJbU5LpAzicJncywHaKU?w=799&h=1114&rs=1&pid=ImgDetMain" 
-                     class="carta-imagen" 
-                     alt="Venusaur Base">
-                <h4 class="mt-3">Venusaur Base</h4>
-                <div class="stats">
-                    <span>HP: 100</span>
-                    <span class="ms-3">ATK: 85</span>
-                </div>
-                <p>Su flor libera un dulce aroma que calma los ánimos de los combatientes.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <span class="precio">$89.99</span>
-                    <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
-                        <i class="bi bi-cart-plus me-2"></i>Añadir
-                    </button>
-                </div>
+    <!-- Emboar V -->
+    <div class="col-md-4 mb-4">
+        <div class="carta" 
+             data-id="emb_v"
+             data-precio="139.99" 
+             data-rareza="Ultra Rara"
+             data-nombre="Emboar V"
+             data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH5/SWSH5_EN_167.png">
+            <span class="etiqueta ultra-rara">Ultra Rara</span>
+            <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH5/SWSH5_EN_167.png" 
+                 class="carta-imagen" 
+                 alt="Emboar V">
+            <h4 class="mt-3">Emboar V</h4>
+            <div class="stats">
+                <span>
+                    <i class="bi bi-heart-fill text-danger"></i> 
+                    HP: 130
+                </span>
+                <span class="ms-3">
+                    <i class="bi bi-lightning-fill text-warning"></i> 
+                    ATK: 90
+                </span>
+            </div>
+            <p>Forma V con poderes destructivos y fuerza bruta.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="precio">$139.99</span>
+                <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
+                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                </button>
             </div>
         </div>
+    </div>
 
-        <!-- Venusaur VMAX -->
-        <div class="col-md-4 mb-4">
-            <div class="carta" 
-                 data-id="venusaur_vmax"
-                 data-precio="149.99" 
-                 data-rareza="Ultra Rara"
-                 data-nombre="Venusaur VMAX" 
-                 data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH2/SWSH2_EN_2.png">
-                <span class="etiqueta ultra-rara">Ultra Rara</span>
-                <img src="https://cdn.chaoscards.co.uk/uploads/prod_img/2_174632_e.png?v=-62169983925" 
-                     class="carta-imagen" 
-                     alt="Venusaur VMAX">
-                <h4 class="mt-3">Venusaur VMAX</h4>
-                <div class="stats">
-                    <span>HP: 120</span>
-                    <span class="ms-3">ATK: 100</span>
-                </div>
-                <p>Forma VMAX con poderes incrementados y arte especial.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <span class="precio">$149.99</span>
-                    <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
-                        <i class="bi bi-cart-plus me-2"></i>Añadir
-                    </button>
-                </div>
+    <!-- Emboar VMAX -->
+    <div class="col-md-4 mb-4">
+        <div class="carta" 
+             data-id="emb_vmax"
+             data-precio="189.99" 
+             data-rareza="Ultra Rara"
+             data-nombre="Emboar VMAX"
+             data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH6/SWSH6_EN_169.png">
+            <span class="etiqueta ultra-rara">Ultra Rara</span>
+            <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH6/SWSH6_EN_169.png" 
+                 class="carta-imagen" 
+                 alt="Emboar VMAX">
+            <h4 class="mt-3">Emboar VMAX</h4>
+            <div class="stats">
+                <span>
+                    <i class="bi bi-heart-fill text-danger"></i> 
+                    HP: 160
+                </span>
+                <span class="ms-3">
+                    <i class="bi bi-lightning-fill text-warning"></i> 
+                    ATK: 110
+                </span>
+            </div>
+            <p>La forma VMAX definitiva con poder ardiente devastador.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="precio">$189.99</span>
+                <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
+                    <i class="bi bi-cart-plus me-2"></i>Añadir
+                </button>
             </div>
         </div>
+    </div>
         </div>
     </div>
 

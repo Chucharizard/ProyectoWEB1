@@ -1,0 +1,130 @@
+/* Card Grid */
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Card Base */
+.carta {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.carta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-color: var(--accent-color);
+}
+
+/* Discount Badge */
+.discount-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--discount-color);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Card Image */
+.card-image {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.carta:hover .card-image img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Price Styling */
+.price-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: rgba(255,255,255,0.6);
+}
+
+.discounted-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Add to Cart Button */
+.btn-anadir {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-anadir:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Rarity Badges */
+.rarity-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.rarity-badge.ultra-rare {
+    background: linear-gradient(45deg, #ffd700, #ffa500);
+    color: #000;
+}
+
+.rarity-badge.rare {
+    background: linear-gradient(45deg, #4a90e2, #357abd);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .offers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 20px;
+    }
+}

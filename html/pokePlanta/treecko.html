@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéCards - Treecko</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/pokemon/pokemon-cards-planta.css">
+
+    <link rel="stylesheet" href="../../css/general/navFoot.css">
+    <link rel="stylesheet" href="../../css/general/carrito.css">
+
+</head>
+
+<body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+                alt="PokéCards Logo" class="nav-logo" width="40" height="40">
+            <span class="brand-text" >PokéCards</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../index.html#catalogo">Catálogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#ofertas">Ofertas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#novedades">Novedades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="html/general/contacto.html">Contacto</a>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center">
+                <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalCarrito">
+                    <i class="bi bi-cart3 position-relative">
+                        <span id="contadorCarrito" 
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      0
+                  </span>
+                    </i>
+                </a>
+                <a href="#" class="nav-link ms-3">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="navbar-spacer" style="height: 76px;"></div>
+
+    <!-- Banner Principal -->
+    <section class="banner-principal">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Cartas de Treecko</h1>
+                    <p class="lead mb-4">Descubre nuestra exclusiva colección de cartas del Pokémon planta inicial</p>
+                    <div class="buscador">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="buscarCartas" placeholder="Buscar cartas..."
+                                onkeyup="buscarCartas(this.value)">
+                            <button class="btn btn-buscar">
+                                <i class="bi bi-search"></i>
+                                Buscar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/252.png"
+                        alt="Treecko" class="banner-imagen">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="seccion-filtros">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <select class="form-select" id="filtroOrden" onchange="filtrarCartas()">
+                        <option selected>Ordenar por</option>
+                        <option>Precio: Menor a Mayor</option>
+                        <option>Precio: Mayor a Menor</option>
+                        <option>Más Populares</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select" id="filtroRareza" onchange="filtrarCartas()">
+                        <option selected>Rareza</option>
+                        <option>Común</option>
+                        <option>Rara</option>
+                        <option>Ultra Rara</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select" id="filtroEdicion" onchange="filtrarCartas()">
+                        <option selected>Edición</option>
+                        <option>Base Set</option>
+                        <option>Jungle</option>
+                        <option>Fossil</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select" id="filtroEstado" onchange="filtrarCartas()">
+                        <option selected>Estado</option>
+                        <option>Nuevo</option>
+                        <option>Casi Nuevo</option>
+                        <option>Usado</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de Cartas -->
+    <section class="seccion-cartas">
+        <div class="container">
+            <div class="row" id="contenedor-cartas">
+                <!-- Treecko Base -->
+                <div class="col-md-4 mb-4">
+                    <div class="carta" data-id="treecko_base_1" data-precio="19.99" data-rareza="Común"
+                        data-nombre="Treecko Base"
+                        data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/RS/RS_EN_76.png">
+                        <span class="etiqueta comun">Común</span>
+                        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/RS/RS_EN_76.png"
+                            class="carta-imagen" alt="Treecko Base">
+                        <h4 class="mt-3">Treecko Base</h4>
+                        <div class="stats">
+                            <span>HP: 40</span>
+                            <span class="ms-3">ATK: 30</span>
+                        </div>
+                        <p>Sus pies tienen ventosas que le permiten escalar paredes verticales.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="precio">$19.99</span>
+                            <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
+                                <i class="bi bi-cart-plus me-2"></i>Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Treecko Alt Art -->
+                <div class="col-md-4 mb-4">
+                    <div class="carta" data-id="treecko_alt" data-precio="39.99" data-rareza="Rara"
+                        data-nombre="Treecko Alt Art"
+                        data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/SSH/SSH_EN_12.png">
+                        <span class="etiqueta rara">Rara</span>
+                        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/SSH/SSH_EN_12.png"
+                            class="carta-imagen" alt="Treecko Alt Art">
+                        <h4 class="mt-3">Treecko Alt Art</h4>
+                        <div class="stats">
+                            <span>HP: 50</span>
+                            <span class="ms-3">ATK: 40</span>
+                        </div>
+                        <p>Versión de arte alternativo de Treecko en su hábitat natural.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="precio">$39.99</span>
+                            <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
+                                <i class="bi bi-cart-plus me-2"></i>Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grovyle Base -->
+                <div class="col-md-4 mb-4">
+                    <div class="carta" data-id="grovyle_base_1" data-precio="49.99" data-rareza="Rara"
+                        data-nombre="Grovyle Base"
+                        data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/RG/RG_EN_31.png">
+                        <span class="etiqueta rara">Rara</span>
+                        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/RG/RG_EN_31.png"
+                            class="carta-imagen" alt="Grovyle Base">
+                        <h4 class="mt-3">Grovyle Base</h4>
+                        <div class="stats">
+                            <span>HP: 70</span>
+                            <span class="ms-3">ATK: 50</span>
+                        </div>
+                        <p>Las hojas de sus brazos son afiladas como cuchillas.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="precio">$49.99</span>
+                            <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
+                                <i class="bi bi-cart-plus me-2"></i>Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grovyle Holo -->
+                <div class="col-md-4 mb-4">
+                    <div class="carta" data-id="grovyle_holo" data-precio="69.99" data-rareza="Ultra Rara"
+                        data-nombre="Grovyle Holo"
+                        data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/PL/PL_EN_32.png">
+                        <span class="etiqueta ultra-rara">Ultra Rara</span>
+                        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/PL/PL_EN_32.png"
+                            class="carta-imagen" alt="Grovyle Holo">
+                        <h4 class="mt-3">Grovyle Holo</h4>
+                        <div class="stats">
+                            <span>HP: 80</span>
+                            <span class="ms-3">ATK: 60</span>
+                        </div>
+                        <p>Versión holográfica especial de Grovyle.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="precio">$69.99</span>
+                            <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
+                                <i class="bi bi-cart-plus me-2"></i>Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sceptile V -->
+                <div class="col-md-4 mb-4">
+                    <div class="carta" data-id="sceptile_v" data-precio="129.99" data-rareza="Ultra Rara"
+                        data-nombre="Sceptile V"
+                        data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/CRE/CRE_EN_7.png">
+                        <span class="etiqueta ultra-rara">Ultra Rara</span>
+                        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/CRE/CRE_EN_7.png"
+                            class="carta-imagen" alt="Sceptile V">
+                        <h4 class="mt-3">Sceptile V</h4>
+                        <div class="stats">
+                            <span>HP: 120</span>
+                            <span class="ms-3">ATK: 90</span>
+                        </div>
+                        <p>Carta V con poderes mejorados y arte especial.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="precio">$129.99</span>
+                            <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
+                                <i class="bi bi-cart-plus me-2"></i>Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sceptile VMAX -->
+                <div class="col-md-4 mb-4">
+                    <div class="carta" data-id="sceptile_vmax" data-precio="179.99" data-rareza="Ultra Rara"
+                        data-nombre="Sceptile VMAX"
+                        data-imagen="https://assets.pokemon.com/assets/cms2/img/cards/web/CRE/CRE_EN_8.png">
+                        <span class="etiqueta ultra-rara">Ultra Rara</span>
+                        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/CRE/CRE_EN_8.png"
+                            class="carta-imagen" alt="Sceptile VMAX">
+                        <h4 class="mt-3">Sceptile VMAX</h4>
+                        <div class="stats">
+                            <span>HP: 150</span>
+                            <span class="ms-3">ATK: 100</span>
+                        </div>
+                        <p>La forma VMAX más poderosa de Sceptile.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="precio">$179.99</span>
+                            <button class="btn btn-anadir" onclick="carrito.agregarItem(this)">
+                                <i class="bi bi-cart-plus me-2"></i>Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Paginación -->
+        <nav class="mt-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Siguiente</a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre Nosotros</h3>
+                    <p>PokéCards es tu destino número uno para coleccionar las mejores cartas Pokémon. Únete a nuestra
+                        comunidad de entrenadores.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#catalogo">Catálogo</a></li>
+                        <li><a href="#ofertas">Ofertas</a></li>
+                        <li><a href="#novedades">Novedades</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-envelope me-2"></i> willyguevara048@gmail.com</li>
+                        <li><i class="bi bi-telephone me-2"></i> 74402990</li>
+                        <li><i class="bi bi-geo-alt me-2"></i> Yotala - Sucre</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 1994 Chucharizard. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+          <!-- Modal del Carrito -->
+          <div class="modal fade" id="modalCarrito" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header border-secondary">
+                        <h5 class="modal-title text-white">
+                            <i class="bi bi-cart3 me-2"></i>Carrito de Compras
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="contenidoCarrito" class="text-white">
+                            Tu carrito está vacío
+                        </div>
+                    </div>
+                    <div class="modal-footer border-secondary">
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <h5 class="text-white">Total: $<span id="totalCarrito">0.00</span></h5>
+                                </div>
+                                <div class="col-6">
+                                    <button class="btn btn-success w-100" id="btnPagar" disabled>
+                                        <i class="bi bi-credit-card me-2"></i>Pagar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/general/carrito.js"></script>
+</body>
+
+</html>
